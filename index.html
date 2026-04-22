@@ -342,9 +342,12 @@
         }]
       },
       options: {
+        responsive: true,
+        maintainAspectRatio: false,
         cutout: '65%',
+        layout: { padding: { left: 0, right: 0 } },
         plugins: {
-          legend: { display: true, position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } },
+          legend: { display: true, position: 'bottom', labels: { boxWidth: 12, font: { size: 10 }, padding: 15 } },
           tooltip: { callbacks: { label: (c) => `${c.label}: ¥${c.raw.toLocaleString()} (${((c.raw/expTotal)*100).toFixed(1)}%)` } }
         }
       },
